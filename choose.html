@@ -8,17 +8,38 @@
   </head>
   <body>
     <div class="bored-header">
-      <h4>Pick type:</h4>
       <form onsubmit="submitChoice()">
-        <label for="cars">Choose a car:</label>
-        <select id="cars" name="cars">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="fiat">Fiat</option>
-          <option value="audi">Audi</option>
+        <label for="type">
+          <h4>Pick activity type:</h4>
+        </label>
+        <select id="type" name="type">
+          <option value="education">Education</option>
+          <option value="charity">Charity</option>
         </select>
         <input type="submit" />
       </form>
+
+      <div id="chosen-activity-card">
+        <h2 id="chosen-activity">Activity</h2>
+        <div class="activity-card">
+          <div class="activity-info">
+            <p>Type:</p>
+            <p id="type"></p>
+          </div>
+          <div class="activity-info">
+            <p>Accessability:</p>
+            <p id="accessability"></p>
+          </div>
+          <div class="activity-info">
+            <p>Costlyness:</p>
+            <p id="price"></p>
+          </div>
+          <div class="activity-info">
+            <p>Participants:</p>
+            <p id="participants"></p>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

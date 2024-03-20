@@ -1,11 +1,8 @@
-console.log("hello");
-
 const url = "http://www.boredapi.com/api/activity";
 
 async function generateActivity() {
   const res = await fetch(url);
   const data = await res.json();
-
   console.log(data);
 
   document.getElementById("activity").innerHTML = data.activity;
@@ -16,6 +13,13 @@ async function generateActivity() {
   document.getElementById("participants").innerHTML = data.participants;
 }
 
-function submitChoice() {
-  console.log("yolo");
+async function submitChoice() {
+  let type_url = url + "?type=" + type.value;
+  console.log(type_url);
+
+  const res = await fetch(type_url);
+  const data = await res.json();
+  console.log("YOLO", data.type);
+
+  document.getElementById("chosen-activity").innerHTML = data.activity;
 }
