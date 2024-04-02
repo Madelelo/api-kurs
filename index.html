@@ -33,11 +33,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-{#await fetchImage}
-<p>...waiting</p>
-{:then data}
-<img src="{data.message}" alt="Dog image" />
-{:catch error}
-<p>An error occurred!</p>
-{/await}
