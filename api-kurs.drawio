@@ -1,9 +1,54 @@
-<mxfile host="app.diagrams.net" modified="2024-04-02T07:01:06.309Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" version="24.0.7" etag="nLEsxA4-q-VJQyk4l_j_" type="github">
-  <diagram name="Page-1" id="XXMaXhBAnpBaaiVIRn2d">
-    <mxGraphModel>
+<mxfile host="app.diagrams.net" modified="2024-04-02T07:08:14.911Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="1WouEech7RiMbI4mCaRm" version="24.0.7" type="github">
+  <diagram name="Del 1" id="XXMaXhBAnpBaaiVIRn2d">
+    <mxGraphModel dx="824" dy="655" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Q2A90egKWMbucWG1SrzC-2" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;HTML&lt;div&gt;JS&lt;/div&gt;&lt;div&gt;CSS&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="212" y="167" width="65" height="79" as="geometry" />
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-9" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="57" y="167" width="129" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-10" value="" style="shape=actor;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="Q2A90egKWMbucWG1SrzC-9">
+          <mxGeometry x="35" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-11" value="Bruker&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Q2A90egKWMbucWG1SrzC-9">
+          <mxGeometry x="26.5" y="65" width="57" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-15" value="" style="endArrow=none;startArrow=classic;html=1;rounded=0;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="153" y="205" as="sourcePoint" />
+            <mxPoint x="213" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-18" value="&lt;h1&gt;Systemskisse: Bored app v.1&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="203" y="25" width="348" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-20" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="401" y="128" width="353" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-21" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+          <mxGeometry x="503" y="195" width="85" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-22" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="609" y="179" width="56" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-25" value="www.boredapi.com" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="533" y="155" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=65;entryDy=30;entryPerimeter=0;exitX=0.074;exitY=0.447;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Q2A90egKWMbucWG1SrzC-20" target="Q2A90egKWMbucWG1SrzC-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="427" y="197" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q2A90egKWMbucWG1SrzC-29" value="Fetch" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Q2A90egKWMbucWG1SrzC-28">
+          <mxGeometry x="-0.0405" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
