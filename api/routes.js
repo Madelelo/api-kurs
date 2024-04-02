@@ -77,7 +77,7 @@ router.post("/newgame", (req, res) => {
   console.log(games);
 
   res.send({
-    message: "New user was added to the list",
+    message: "New game was added to the list",
   });
 });
 
