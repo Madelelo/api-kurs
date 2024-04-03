@@ -1,9 +1,9 @@
 console.log("hello");
 
-const URL = "http://localhost:3000/api/games/";
+const APIURL = "http://172.31.25.151:3000/api/games";
 
 async function generateGameCards() {
-  const res = await fetch(URL);
+  const res = await fetch(APIURL);
   const data = await res.json();
   console.log(data);
 
