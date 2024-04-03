@@ -1,36 +1,69 @@
 console.log("hello");
 
-const APIURL = "http://172.31.25.151:3000/api/games";
+const API_URL = "http://localhost:3000/api/games/";
 
-async function generateGameCards() {
-  const res = await fetch(APIURL);
-  const data = await res.json();
-  console.log(data);
+function generateGameCard(game) {
+  const card = document.createElement("div");
+  card.className = "games-card";
 
-  data.map((game) => {
-    document.getElementById("game-name").innerHTML = game.name;
-    document.getElementById("game-type").innerHTML = game.type;
-    document.getElementById("game-year").innerHTML = game.year;
-    document.getElementById("game-console").innerHTML = game.console;
-    document.getElementById("game-company").innerHTML = game.company;
-  });
+  //Add name
+  const name = document.createElement("h3");
+  const nameNode = document.createTextNode(game.name);
+  name.appendChild(nameNode);
+  card.appendChild(name);
+
+  //Add year
+  const year = document.createElement("p");
+  const yearNode = document.createTextNode(game.year);
+  year.appendChild(yearNode);
+  card.appendChild(year);
+
+  //Add type
+  const type = document.createElement("p");
+  const typeNode = document.createTextNode(game.type);
+  type.appendChild(typeNode);
+  card.appendChild(type);
+
+  //Add console
+  const console = document.createElement("p");
+  const consoleNode = document.createTextNode(game.console);
+  console.appendChild(consoleNode);
+  card.appendChild(console);
+
+  //Adds card to HTML
+  const element = document.getElementById("games-list");
+  element.appendChild(card);
 }
 
-function submitChoice() {
-  console.log("yolo");
+async function generateGameCards() {
+  const res = await fetch(API_URL);
+  const data = await res.json();
+
+  for (let i = 0; i < data.length; i++) {
+    generateGameCard(data[i]);
+  }
+
+  document.getElementById("game-counter").innerHTML =
+    "Antall spill i databasen: " + data.length;
 }
 
 generateGameCards();
 
-function createUser() {
-  fetch("http://localhost:3000/api/newuser", {
+function addGame() {
+  let newName = document.getElementById("new-game-name").value;
+
+  let newGame = {
+    name: newName,
+    year: 2024,
+    id: 5,
+    company: "  ",
+    type: " ",
+    console: [],
+  };
+
+  fetch("http://localhost:3000/api/newgame", {
     method: "POST",
-    body: JSON.stringify({
-      id: "4",
-      name: "Faizan",
-      username: "faizan",
-      email: "mmm@mmm.no",
-    }),
+    body: JSON.stringify({ newGame }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
@@ -40,10 +73,7 @@ function createUser() {
     })
     .then(function (data) {
       console.log(data);
-      // title = document.getElementById("title");
-      // body = document.getElementById("bd");
-      // title.innerHTML = data.title;
-      // body.innerHTML = data.body;
     })
     .catch((error) => console.error("Error:", error));
+  generateGameCards();
 }
