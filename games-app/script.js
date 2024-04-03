@@ -1,6 +1,17 @@
-const API_URL = "http://localhost:3000/api/games/";
-const API_URL_SERVER = "172.31.25.151:3000/api/games";
+const API_URL = "http://localhost:3000/api/";
+const API_URL_SERVER = "http://172.31.25.151:3000/api/";
 
+async function generateGameCards() {
+  const res = await fetch(API_URL_SERVER + "games");
+  const data = await res.json();
+
+  for (let i = 0; i < data.length; i++) {
+    generateGameCard(data[i]);
+  }
+
+  document.getElementById("game-counter").innerHTML =
+    "Antall spill i databasen: " + data.length;
+}
 function generateGameCard(game) {
   const card = document.createElement("div");
   card.className = "games-card";
@@ -34,18 +45,6 @@ function generateGameCard(game) {
   element.appendChild(card);
 }
 
-async function generateGameCards() {
-  const res = await fetch(API_URL);
-  const data = await res.json();
-
-  for (let i = 0; i < data.length; i++) {
-    generateGameCard(data[i]);
-  }
-
-  document.getElementById("game-counter").innerHTML =
-    "Antall spill i databasen: " + data.length;
-}
-
 generateGameCards();
 
 function addGame() {
@@ -60,7 +59,7 @@ function addGame() {
     console: [],
   };
 
-  fetch("http://localhost:3000/api/newgame", {
+  fetch(API_URL_SERVER + "newgame", {
     method: "POST",
     body: JSON.stringify({ newGame }),
     headers: {
