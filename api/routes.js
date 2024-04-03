@@ -1,8 +1,33 @@
 const express = require("express");
-
 const router = express.Router();
 
-// "Fake" database
+// "Fake" database for users
+const users = [
+  { id: "1", name: "Madeleine", username: "madelelo", email: "mmm@mmm.no" },
+  { id: "2", name: "Magnus", username: "magnus", email: "mmm@mmm.no" },
+  { id: "3", name: "Mathias", username: "mathias", email: "mmm@mmm.no" },
+];
+
+// Endpoints
+router.get("/users", (req, res) => {
+  res.send(users);
+});
+
+router.get("/users/:id", (req, res) => {
+  const userId = req.params.id;
+  let user = users.filter((x) => x.id === userId);
+  res.send(user);
+});
+
+router.post("/users", (req, res) => {
+  const newUser = req.body;
+  users.push(newUser);
+  console.log(users);
+
+  res.send("New user was added to the list");
+});
+
+// Fake database for games app
 const games = [
   {
     name: "The Legend of Zelda: Breath of the Wild",
@@ -49,23 +74,6 @@ const games = [
     ],
   },
 ];
-
-const users = [
-  { id: "1", name: "Madeleine", username: "madelelo", email: "mmm@mmm.no" },
-  { id: "2", name: "Magnus", username: "magnus", email: "mmm@mmm.no" },
-  { id: "3", name: "Mathias", username: "mathias", email: "mmm@mmm.no" },
-];
-
-// Define routes
-router.get("/users", (req, res) => {
-  res.send(users);
-});
-
-router.get("/users/:id", (req, res) => {
-  const userId = req.params.id;
-  let user = users.filter((x) => x.id === userId);
-  res.send(user);
-});
 
 router.get("/games", (req, res) => {
   res.send(games);

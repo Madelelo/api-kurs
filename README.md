@@ -1,7 +1,6 @@
 # API-kurs
 
 Dette kurset består av 2 deler:
-\
 
 **DEL 1 - Koble til åpne APIer med Vanilla JS**\
  Stikkord: fetch, async-await, GET\

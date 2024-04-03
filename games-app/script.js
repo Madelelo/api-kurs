@@ -1,6 +1,5 @@
-console.log("hello");
-
 const API_URL = "http://localhost:3000/api/games/";
+const API_URL_SERVER = "172.31.25.151:3000/api/games";
 
 function generateGameCard(game) {
   const card = document.createElement("div");
