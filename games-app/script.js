@@ -2,7 +2,7 @@ const API_URL = "http://localhost:3000/api/";
 const API_URL_SERVER = "http://172.31.25.151:3000/api/";
 
 async function generateGameCards() {
-  const res = await fetch(API_URL_SERVER + "games");
+  const res = await fetch(API_URL + "games");
   const data = await res.json();
 
   for (let i = 0; i < data.length; i++) {
@@ -59,7 +59,7 @@ function addGame() {
     console: [],
   };
 
-  fetch(API_URL_SERVER + "newgame", {
+  fetch(API_URL + "newgame", {
     method: "POST",
     body: JSON.stringify({ newGame }),
     headers: {

@@ -20,7 +20,7 @@ router.get("/users/:id", (req, res) => {
 });
 
 router.post("/users", (req, res) => {
-  const newUser = req.body;
+  const newUser = req.body.newUser;
   users.push(newUser);
   console.log(users);
 

@@ -1,4 +1,4 @@
-const APIURL = "http://www.boredapi.com/api/activity";
+const APIURL = "http://www.boredapi.com/api/activity/";
 
 async function generateActivity() {
   const response = await fetch(APIURL); // Henter fra APIURL
